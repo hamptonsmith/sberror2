@@ -179,4 +179,10 @@ const SbError = require('./index');
     }
 }
 
+{
+    class Foo extends SbError { static messageTemplate = 'foo'; };
+    new Foo({}, undefined);
+    new Foo(undefined, {});
+}
+
 console.log('All tests passed.');

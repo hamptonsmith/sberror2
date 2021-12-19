@@ -30,6 +30,9 @@ class SbError extends Error {
             else if (typeof arg === 'object') {
                 details = arg;
             }
+            else if (arg === undefined) {
+                // No-op.
+            }
             else {
                 throw buildUnexpectedTypeError({
                     actual: typeof arg,
