@@ -1,6 +1,6 @@
 {
   "name": "@shieldsbetter/sberror2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Javascript errors to my particular sensibilities.",
   "main": "index.js",
   "dependencies": {
