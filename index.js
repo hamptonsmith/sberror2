@@ -58,10 +58,7 @@ class SbError extends Error {
         this.details = details;
         this.message =
                 this.__proto__.constructor.renderMessage(msgTemplate, details);
-
-        if (!this.code) {
-            this.code = constantCase(name);
-        }
+        this.code = constantCase(name);
 
         let level = this.__proto__;
         while (level) {

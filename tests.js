@@ -185,4 +185,10 @@ const SbError = require('./index');
     new Foo(undefined, {});
 }
 
+{
+    class Foo extends SbError { static messageTemplate = 'foo'; };
+    var f = new Foo({ code: 'xyz' });
+    assert.equal(f.code, 'FOO');
+}
+
 console.log('All tests passed.');
